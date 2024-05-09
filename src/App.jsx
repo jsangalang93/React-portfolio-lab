@@ -1,5 +1,4 @@
 const h2 = {
-  
   textAlign: 'center',
   
 }
@@ -10,6 +9,12 @@ const h1 = {
 const li = {
   listStyleType: 'none'
 }
+
+const body = {
+  backgroundColor: 'red',
+  borderRadius: '12px'
+}
+
 const App =  () => {
 const skill = { text: "A skill I have!", done: true}
 const mySkills = [
@@ -34,6 +39,7 @@ const mySkills = [
 ]
 return (
 <>
+<div style= {body}>
 <h1 style= {h1}>Skills For Jordan Sangalang</h1>
 <h2 style= {h2}>Coding Languages</h2>
 <ul>
@@ -56,7 +62,7 @@ return (
 ))}
 </ul>
 
-
+</div>
 </>
 )
 }
