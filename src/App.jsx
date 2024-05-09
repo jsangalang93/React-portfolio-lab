@@ -1,64 +1,66 @@
+const h2 = {
+  
+  textAlign: 'center',
+  
+}
+const h1 = { 
+  textAlign: 'center'
+}
 
-
+const li = {
+  listStyleType: 'none'
+}
 const App =  () => {
-
-  const skill = { text: "A skill I have!", done: true}
-
-  const mySkills = [
-    {
-      skill: 'Embedded JavaScript',
-      comfort: 9,
-      frontEnd: true,
-      Backend: true
-    },
-    {
-      skill: 'CSS',
-      comfort: 9,
-      frontEnd: true,
-      backend: false
-
-    },
-    {
-      skill: 'HTML',
-      comfort: 8,
-      frontEnd: true,
-      backend: false
-
-    },
-  ]
-
+const skill = { text: "A skill I have!", done: true}
+const mySkills = [
+  {
+    skill: 'Embedded JavaScript',
+    comfort: 9,
+    frontEnd: true,
+    Backend: true
+  },
+  {
+    skill: 'CSS',
+    comfort: 9,
+    frontEnd: true,
+    backend: false
+  },
+  {
+    skill: 'HTML',
+    comfort: 8,
+    frontEnd: true,
+    backend: false
+  },
+]
 return (
-  <>
-  <h1>Skills For Jordan Sangalang</h1>
-  <h2>Coding Languages/Comfort Level</h2>
+<>
+<h1 style= {h1}>Skills For Jordan Sangalang</h1>
+<h2 style= {h2}>Coding Languages</h2>
 <ul>
- {mySkills.map((currentSkill, index) =>(
-  <li key= {index}>
-    <div className = 'bigdiv'>
-    <b>{currentSkill.skill} </b>
-    <div><br />
-    <b>Comfort level: </b>{currentSkill.comfort}
-    </div>
-
-    <div>
-    <b>Front End: </b> {currentSkill.frontEnd ? 'true' : 'false'}
-    </div>
-
-    <div>
-    <b>Back End: </b> {currentSkill.backend ? 'true' : 'false'}
-    </div><br />
-    </div>
-
-  </li>
- ))}
-  </ul>
+{mySkills.map((currentSkill, index) =>(
+<li style={li} key= {index}>
   
-  
-  </>
+  <div style={h2}>
+  <b>{currentSkill.skill} </b>
+  <div><br />
+  <b>Comfort level: </b>{currentSkill.comfort}
+  </div>
+  <div>
+  <b>Front End: </b> {currentSkill.frontEnd ? 'true' : 'false'}
+  </div>
+  <div>
+  <b>Back End: </b> {currentSkill.backend ? 'true' : 'false'}
+  </div><br />
+  </div>
+</li>
+))}
+</ul>
 
 
+</>
 )
-
+}
+export default App;
 
 // return(
 //   <>
@@ -107,6 +109,6 @@ return (
   // <ul>{skillElements}</ul>
   
   // </>
-}
+// }
 
-export default App;
+// export default App;
